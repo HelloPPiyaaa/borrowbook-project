@@ -1,0 +1,72 @@
+.pro-e h1,
+.re-e h1,
+.edit-e h1 {
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.pro-e {
+    background-color: white;
+    width: 600px;
+    border: 1px solid #FF8D1C;
+    border-radius: 30px;
+    margin: 80px auto 80px auto;
+    padding: 50px 0 50px 0;
+}
+
+.re-e .container1, .edit-e .container1 {
+    padding: 10px 70px 10px 70px;
+}
+
+.pro-e .container1 {
+    padding: 50px 70px 10px 70px;
+}
+
+.pro-e h1,
+.button-edit, .button-e, .re-e h1, .edit-e h1 {
+    text-align: center;
+}
+
+.button-edit a, .button-e a, .button-edit a {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.pro-e label {
+    font-size: 14px;
+    width: 60px;
+}
+
+.link-regis {
+    text-align: center;
+    color: black;
+    margin-top: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"] {
+    border: 1px solid #FF8D1C;
+    font-size: 13px;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.eye-icon {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-80%);
+    cursor: pointer;
+    color: #FF8D1C;
+}
+
+.re-e, .edit-e {
+    background-color: white;
+    width: 800px;
+    border: 1px solid #FF8D1C;
+    border-radius: 30px;
+    margin: 60px auto 60px auto;
+    padding: 50px 0 50px 0;
+}

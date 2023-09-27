@@ -1,0 +1,141 @@
+html {
+    scroll-behavior: smooth;
+}
+.container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center; 
+  height: 100%; 
+  padding-top: 50px;
+}
+nav > .container > div > ul > li > a:hover {
+    color: #FF8D1C!important;
+}
+
+nav > .container > div > ul > li:hover {
+    border-radius: 10px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border: 1px solid #FFCC99;
+    border-bottom: none;
+    box-shadow: 2px 4px 18px #18181818;
+}
+
+nav > .container > div > ul > li:hover > a > i {
+    transition: .25s;
+    transform: rotate(180deg)
+}
+
+nav > .container > div > ul > li > ul {
+    display: none;
+    list-style: none;
+}
+
+nav > .container > div > ul > li:hover > ul > li:hover > a > i {
+    transition: .25s;
+    transform: rotate(180deg)
+}
+
+nav > .container > div > ul > li:hover > ul {
+    position: absolute;
+    display: block!important;
+    padding-left: 1em;
+    background-color: white;
+    border-radius: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border: 1px solid #f5f5f5;
+    box-shadow: 2px 4px 18px #18181818;
+}
+
+nav > .container > div > ul > li:hover > ul > li {
+    padding-right: 1em;
+}
+
+/* Second Level [Dropdown] elements ([#tags]A display on [#tags]a first level on action hover)*/
+nav > .container > div > ul > li:hover > ul > li > a {
+    text-decoration: none;
+    text-align: left;
+    display: inline-block;
+    padding: .25em 0;
+}
+
+nav > .container > div > ul > li:hover > ul > li > a:hover {
+    color: #FF8D1C!important;
+}
+
+.search-input {
+  position: relative;
+}
+
+.search-input input[type="text"] {
+  padding-right: 30px; 
+  border-radius: 20px;
+  width: 150px;
+}
+
+.search-icon {
+  position: absolute;
+  top: 50%;
+  right: 10px; 
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #FF8D1C;
+}
+.navbar {
+  background-color: #FFCC99;
+}
+.navbar-nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  list-style: none;
+  margin-left: auto;
+  padding: 0;
+}
+
+.navbar-brand {
+  margin-right: 30px;
+}
+#navbar{
+  margin-right: 20px;
+}
+.nav-link, .dropdown-content a {
+  font-size: 14px;
+}
+
+/* สไตล์สำหรับเมนู Dropdown */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a {
+  padding: 10px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #FFCC99;
+}
+.cart-icon,.notification-icon, .person-icon {
+  font-size: 24px;
+  margin-left: 10px;
+}
+.nav-item{
+  margin-left: 20px;
+}
