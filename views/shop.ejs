@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>รถเข็น</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="/stylesheets/shop.css">
+</head>
+<body>
+    <%- include('./Partials/nav.ejs') %>
+    <header>
+        <h1>รถเข็น</h1>
+    </header>
+    <section class="centered-section">
+        <div class="image-container">
+            <img src="https://image.makewebeasy.net/makeweb/m_1920x0/7GFEYsdVK/DefaultData/The_Reader_front_cover_FINAL.jpg?v=202206091808" alt="book" class="fit-image">
+        </div>
+        <div class="allshop">
+            <div class="headbook">
+                <div class="detail">
+                    <p style="font-size: 30px; color: #482727; font-weight: bold;">อ่านรักวันโลกร้าว (Der Vorleser)</p>
+                </div>
+            </div>
+    
+            <div class="total">
+                <div class="price">
+                    <p>จำนวน</p>
+                    <p style="margin-left: 70px; margin-right: 20px;"> 1 </p>
+                    <p>เล่ม</p>
+                </div>
+                <div class="totalprice">
+                    <p>ราคารวม</p>
+                    <p style="margin-left: 33px; margin-right: 20px; "> 
+                        <input type="number" name="" id="" style="width: 50px; border: 1px solid #FF8D1C;">
+                    </p>
+                    <p>บาท</p>
+                </div>
+            </div>
+    
+            <div class="locate">
+                <div class="button-borrow">
+                    <a href="#" class="btn   fw-bold" style="border-radius: 10px!important; background-color: white; color: #FF8D1C; border: 1px solid #FF8D1C;">เช่าหนังสือ</a>
+                </div>
+                <div class="button-delete">
+                    <a href="#" class="btn   fw-bold" style="border-radius: 10px!important; background-color: #FF8D1C; color: white;">ลบ</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+</body>
+</html>
