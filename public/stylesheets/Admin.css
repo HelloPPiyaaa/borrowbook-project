@@ -1,0 +1,126 @@
+/* ใช้ทุกหน้า */
+#managealldiv_admin h2 {
+    text-align: center;
+}
+
+#managealldiv_admin {
+    margin: 100px;
+    font-family: 'Mitr', sans-serif;
+    font-family: 'Prompt', sans-serif;
+}
+/*  */
+
+/* ใช้หน้า Manage_book กับ Checkstatus_admin เพราะเทมเพลตเดียวกัน */
+#managetable_admin {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    margin-top: 40px;
+}
+
+#tablemanage_admin table,thead,tr,th,td {
+    text-align: center;
+}
+
+#tablemanage_admin th {
+    background-color: #FF8D1C; /* กำหนดสีพื้นหลังของเฮดเดอร์ */
+    color: black; /* กำหนดสีของตัวอักษรในเฮดเดอร์ */
+}
+
+#tablemanage_admin tr:nth-child(even) {
+    background-color: #ffffff; /* กำหนดสีพื้นหลังของแถวคู่ */
+}
+
+#tablemanage_admin tr:hover {
+    background-color: #fff5eb; /* กำหนดสีพื้นหลังของแถวเมื่อมีการชี้ */
+    color: #ff8000;
+}
+
+#tablemanage_admin {
+    border-color: #FF8D1C; /* เปลี่ยนสีเส้นของตารางเป็นสีแดง (#FF0000) */
+  }
+
+#tablemanage_admin thead,th {
+    border-color: rgb(214, 76, 1);
+}
+
+#addbt_admin {
+    padding: 10px;
+    background-color: #5CD648;
+    color: rgb(255, 255, 255);
+    border: 0px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+}
+#editbt_admin {
+    padding: 10px;
+    background-color: #FFC107;
+    color: rgb(255, 255, 255);
+    border: 0px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+}
+#delbt_admin {
+    padding: 10px;
+    background-color: rgb(227, 41, 41);
+    color: rgb(255, 255, 255);
+    border: 0px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+#addbt_admin:hover , #editbt_admin:hover , #delbt_admin:hover {
+    background-color: rgb(200, 200, 200);
+    color: rgb(46, 46, 46);
+    cursor: pointer;
+}
+/*  */
+
+/* ใช้หน้า Addbook_admin กับ Editbook_admin */
+#addbookalldiv_admin h2 {
+    margin-top: 30px;
+    text-align: center;
+}
+
+#addbookalldiv_admin {
+    margin: 100px; 
+    font-family: 'Mitr', sans-serif;
+    font-family: 'Prompt', sans-serif;
+}
+#columndiv_form {
+    margin-top: 20px;
+}
+#addbookalldiv_admin {
+    padding-top: 20px;
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-bottom: 30px;
+    border: 1px solid #ff8000;
+    border-radius: 20px;
+}
+#columndiv_form button {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    background-color: #FFB366;
+    border: 0px;
+    border-radius: 20px;
+    padding: 10px 20px 10px 20px;
+}
+#columndiv_form button:hover {
+    background-color: #ff8000;
+}
+#bookID,#bookName,#bookCategory,#bookAuthor,#bookPublisher,#bookAmount,#bookSynopsis {
+    border-color: #FF8D1C;
+    border-radius: 10px;
+    background-color: #fffcf8;
+}
+select.form-select option[selected] {
+    background-color: #FFC107; /* สีพื้นหลังที่คุณต้องการ */
+  }
+  
