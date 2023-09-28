@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> 
+    <link rel="stylesheet" href="/stylesheets/style.css">  
+    <link rel="stylesheet" href="/detailbook/style.css"> 
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+  
+
+    <%- include('./partials/nav.ejs') %>
+
+        
+<div class="container">
+
+        <div class="detail">
+             <!--ภาพ-->
+            <img class="img_book_detail" src="/images/test.jpg" alt="">
+
+       
+            <div class="detail_book">
+
+                 <!--รายละเอียด-->
+
+            <div class="detail_book_p">
+                <p id="title_book_datail">อ่านรักวันโลกร้าว (Der Vorleser)</p>
+            </div>
+
+            <div class="detail_book_p">
+                <p>ผู้เขียน: </p> 
+                <p>แบร์นฮาร์ด ชลิงค์</p>
+            </div>
+
+            <div class="detail_book_p">
+                <p>สำนักพิมพ์: </p> 
+                <p>ไลบรารี่ เฮ้าส์/Library House</p>
+            </div>
+
+            <div class="detail_book_p">
+                <p>หมวดหมู่: </p> 
+                <p>วรรณกรรม</p>
+            </div>
+
+            
+
+            <div class="synopsis_detail">
+                <p id="synopsis">เรื่องย่อ</p> 
+            </div>
+            <div class="synopsis_detail">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur vero quo nostrum voluptate quae ad delectus officiis aut quasi soluta reiciendis, voluptatum id magni minima in eum excepturi ducimus natus incidunt dolorum error sapiente voluptates eveniet recusandae! Aut nam, exercitationem eum distinctio pariatur, quae ipsa tenetur veniam error impedit corrupti?</p>
+            </div>
+  
+        </div>
+       
+
+        <div class="detail_trolley">
+            <p id="price_detail_book">ราคา 100 บาท</p>
+            <button class="bt_book_trolley" type="button">เพิ่มลงรถเข็น <i class="bi bi-cart-plus-fill"></i> </button>
+        </div>
+
+    </div>
+
+    </div>
+
+    <%- include('./partials/footer.ejs') %>
+
+</body>
+
+</html>
