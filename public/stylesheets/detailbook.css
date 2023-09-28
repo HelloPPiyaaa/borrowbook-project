@@ -89,5 +89,9 @@
       background-color: #FFB366;
       color: white;
       border-radius: 15px;
+      text-decoration: none;
   
+  }
+  .bt_book_trolley:hover{
+    color: #FFCC99;
   }
