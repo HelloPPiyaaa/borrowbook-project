@@ -23,10 +23,10 @@
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             หมวดหมู่
                         </a>
-                        <div class="dropdown-content">
-                            <a class="dropdown-item" href="#">วรรณกรรม</a>
-                            <a class="dropdown-item" href="#">โรแมนติก</a>
-                            <a class="dropdown-item" href="#">เรื่องสั้น</a>
+                        <div class="dropdown-content rounded" style="border: 1px solid #FF8D1C; ">
+                            <a class="dropdown-item" style="border-bottom: 1px solid #FF8D1C;" href="#">วรรณกรรม</a>
+                            <a class="dropdown-item" style="border-bottom: 1px solid #FF8D1C;" href="#">โรแมนติก</a>
+                            <a class="dropdown-item" style="border-bottom: 1px solid #FF8D1C;" href="#">เรื่องสั้น</a>
                             <a class="dropdown-item" href="#">อบอุ่น</a>
                         </div>
                     </li>
@@ -44,28 +44,41 @@
                     </li>
                     <li class="nav-item">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                            class="bi bi-cart-fill" viewBox="0 0 16 16">
+                            class="bi bi-cart-fill" viewBox="0 0 16 16" style="color: white;">
                             <path
                                 d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
                         </svg>
                     </li>
                     <li class="nav-item">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                            class="bi bi-bell-fill" viewBox="0 0 16 16">
+                            class="bi bi-bell-fill" viewBox="0 0 16 16" style="color: white;">
                             <path
                                 d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zm.995-14.901a1 1 0 1 0-1.99 0A5.002 5.002 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901z" />
                         </svg>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item" id="profile-menu">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                            class="bi bi-person-fill" viewBox="0 0 16 16">
+                            class="bi bi-person-fill" viewBox="0 0 16 16" style="color: white;">
                             <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
                         </svg>
+                        <ul id="profile-menu-dropdown" class="hidden rounded" style="border: 1px solid #FF8D1C;">
+                            <li><a href="/borrow.ejs">การเช่าของฉัน</a></li>
+                            <li><a href="/edit.ejs">แก้ไขโปรไฟล์</a></li>
+                            <li><a href="/login.ejs">ออกจากระบบ</a></li>
+                        </ul>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
+    <script>
+        const profileIcon = document.getElementById('profile-icon');
+        const profileMenuDropdown = document.getElementById('profile-menu-dropdown');
+
+        profileIcon.addEventListener('click', function () {
+            profileMenuDropdown.classList.toggle('hidden');
+        });
+    </script>
 
 </body>
 
