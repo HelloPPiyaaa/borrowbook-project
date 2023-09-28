@@ -1,0 +1,57 @@
+/*ช่อง*/
+
+.book_img {
+    width: 70%;
+    height: 70%;
+    margin: auto;
+    display: block;
+    padding: 15px;
+    border-radius: 25px;
+  }
+  
+  .card_div_book {
+    border: 1px solid #FF8D1C;
+    border-radius: 10px;
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 0 5px rgb(214, 214, 218);
+    margin-top: 15px;
+    margin: 20px;
+  
+  }
+  
+  .card-title_book {
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  /*ปุ่ม*/
+  
+  .bt_book_detail {
+    border: 1px solid #FF8D1C;
+    background-color: white;
+    border-radius: 15px;
+   
+  
+  }
+  .bt_book_trolly{
+      border: 1px solid #FF8D1C;
+      background-color: #FFB366;
+      color: white;
+      border-radius: 15px;
+     
+      
+     
+  }
+  
+  /*รูปปก*/
+  
+  .img_title {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: auto;
+    /* รูปภาพจะปรับสูงตามสัดส่วนของรูปและหน้าจอ */
+  }
