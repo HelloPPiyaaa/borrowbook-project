@@ -32,6 +32,8 @@
     border: 1px solid #FF8D1C;
     background-color: white;
     border-radius: 15px;
+    text-decoration: none;
+    color: black;
    
   
   }
@@ -40,10 +42,23 @@
       background-color: #FFB366;
       color: white;
       border-radius: 15px;
+      text-decoration: none;
      
       
      
   }
+  
+  .bt_book_trolly:hover{
+    color: #FFCC99;
+  }
+  .bt_book_detail:hover{
+    color: #FF8D1C;
+  }
+  
+  
+  
+  
+  
   
   /*รูปปก*/
   
@@ -55,3 +70,4 @@
     margin: auto;
     /* รูปภาพจะปรับสูงตามสัดส่วนของรูปและหน้าจอ */
   }
+  
