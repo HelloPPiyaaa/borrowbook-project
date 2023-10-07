@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="/stylesheets/admin.css">
+    <title>รายการหนังสือ</title>
+</head>
+<body>
+     <%- include('./Partials/navAdmin.ejs') %>
+     <div class="home-admin">
+          <p>จัดการหนังสือ</p>
+          <a href="/books/add">เพิ่มหนังสือ</a>
+     </div>
+     <div class="table">
+          <table>
+               <tr>
+                    <th>รหัสหนังสือ</th>
+                    <th>ชื่อหนังสือ</th>
+                    <th>ปกหนังสือ</th>
+                    <th>หมวดหมู่</th>
+                    <th>จำนวนเล่ม</th>
+                    <th>ราคา</th>
+                    <th colspan="2">จัดการ</th>
+               </tr>
+               <% if (books.length>0) { %>
+                    <% books.forEach(bookinfo=> { %>
+                         <tr>
+                              <td><%= bookinfo.bookid %></td>
+                              <td style="width: 250px;"><%= bookinfo.title %></td>
+                              <td><img src="/images/<%= bookinfo.image %>" width="200px" style="display: block; margin-left: auto; margin-right: auto;" ></td>
+                              <td><%= bookinfo.category %></td>
+                              <td><%= bookinfo.amount %></td>
+                              <td><%= bookinfo.price %></td>
+                              <td style="width: 150px;"><a class="edit" href="/books/editBook/<%= bookinfo._id%>">Edit</a></td>
+                              <td style="width: 150px;"><a class="delete" data-id="<%= bookinfo._id%>">Delete</a></td>
+                              
+                         </tr>
+                    <% }) %>
+               <% } else { %>
+                    <tr>
+                         <td colspan="8" style="text-align: center;">ไม่มีหนังสือในรายการ</td>
+                    </tr>
+               <% } %>
+          </table>
+     </div>
+    
+
+     <script>
+          var deleteLinks = document.querySelectorAll('a.delete');
+      
+          deleteLinks.forEach((del) => {
+              del.addEventListener('click', (e) => {
+                  e.preventDefault();  // Prevent the default link behavior
+      
+                  var endpoint = `/books/delbook/${del.dataset.id}`;
+                  var text = "ลบแน่หรอเตง?";
+                  var confirmDelete = confirm(text);
+      
+                  if (confirmDelete) {
+                      fetch(endpoint, {
+                          method: 'DELETE'
+                      })
+                      .then(response => response.json())
+                      .then(data => window.location.href = data.redirect)
+                      .catch(err => console.log(err));
+                  }
+              });
+          });
+      </script>
+
+<%- include('./partials/footer.ejs') %>
+
+
+</body>
+</html>
