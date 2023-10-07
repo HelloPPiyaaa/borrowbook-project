@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt&family=Roboto&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Prompt', sans-serif;
+}
+
+.home-admin {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.home-admin p {
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 4rem;
+}
+
+.home-admin a {
+    text-decoration: none;
+    background-color: #4942E4;
+    color: white;
+    padding: 0.5rem 3rem;
+    border-radius: 10px;
+}
+
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 85%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 4rem;
+}
+
+table td,
+table th {
+    border: 1px solid black;
+}
+
+td,
+th {
+    border: 1px solid;
+    text-align: center;
+    padding: 8px;
+}
+
+.edit{
+    background-color: #FD7E14;
+    color: white;
+    text-decoration: none;
+    padding: 10px 25px;
+    border-radius: 10px;
+}
+
+.edit:hover{
+    background-color: #ca5c03;
+    color: white;
+}
+
+.delete{
+    background-color: #DC3435;
+    color: white;
+    text-decoration: none;
+    padding: 10px 25px;
+    border-radius: 10px;
+}
+
+.delete:hover{
+    background-color: #be1313;
+    color: white;
+}
+
+/* เพิ่ม-แก้ไข หนังสือ */
+.container-add{
+    background-color: white;
+    width: 700px;
+    border: 2px solid #11009E;
+    border-radius: 30px;
+    margin: 30px auto 80px auto;
+    padding: 50px 0 40px 0;
+}
+
+.form-admin label,
+.form-editadmin label {
+    display: block;
+    margin-left: 12%;
+    margin-right: 12%;
+    line-height: 200%;
+    font-size: 13px;
+}
+
+.form-admin input,
+.form-editadmin input {
+    border: 1px solid #11009E;
+    display: block;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 13px;
+    border: 1 solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.form-admin textarea,
+.form-editadmin textarea{
+    border: 1px solid #11009E;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 13px;
+    border: 1 solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+} 
+
+.form-admin select,
+.form-editadmin select{
+    border: 1px solid #11009E;
+    display: block;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 13px;
+    border: 1 solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.addbook,
+.editbook{
+    display: block;
+    width: 75%;
+    cursor: pointer;
+    background-color: #11009E;
+    color: white;
+    padding: 10px;
+    border: none;
+    font-size: 13px;
+    border-radius: 10px;
+    margin: 5px 0px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.addbook:hover{
+    background-color: #4942E4;
+}
+
+/* แก้ไขหนังสือ */
+
+.container-editadmin{
+    background-color: white;
+    width: 700px;
+    border: 2px solid #11009E;
+    border-radius: 30px;
+    margin: 30px auto 80px auto;
+    padding: 50px 0 40px 0;
+}
+
+/* คำขอหนังสือ */
+.rent{
+    text-decoration: none;
+    background-color: #4942E4;
+    color: white;
+    padding: 10px 25px;
+    border-radius: 10px;
+}
+
+.rent:hover{
+    background-color: #332bcb;
+    color: white;
+}
+
+.norent{
+    background-color: #DC3435;
+    color: white;
+    text-decoration: none;
+    padding: 10px 25px;
+    border-radius: 10px;
+}
+
+.norent:hover{
+    background-color: #be1313;
+    color: white;
+}
+
+
