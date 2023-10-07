@@ -1,114 +1,175 @@
-.centered-section {
-    margin: auto;
-    /* ใช้ margin:auto เพื่อจัดเนื้อหากึ่งกลางทั้งแนวนอนและแนวตั้ง */
-    /* กำหนดความกว้างของ section ให้เป็น 50% ของพื้นที่ของ parent element */
-    text-align: center;
-    border: 1px solid #FF8D1C;
-    width: 800px;
-    border-radius: 20px;
-    height: 300px;
-}
-.allshop{
-    margin-right: 30px;
-    margin-top: 30px;
-}
-.image-container img{
-    max-width: 200px;
-    float: left;
-    margin-right: 20px;
-    border-radius: 20px;
-    height: 300px;
-    overflow: hidden; /* ใช้ในกรณีรูปภาพใหญ่กว่า container */
-    border: 2px solid #ccc;
-}
-.fit-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* คำสั่งนี้จะทำให้รูปภาพขยับในกรอบแต่จะไม่เปลี่ยนขนาด */
+@import url('https://fonts.googleapis.com/css2?family=Prompt&family=Roboto&display=swap');
+
+* {
+    font-family: 'Prompt', sans-serif;
 }
 
-.headbook,
-.total,
-.locate {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-}
-
-
-.detail,
-.price,
-.totalprice,
-.location,
-.datetime {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    margin: 0;
-}
-
-.detail p {
-    margin-left: 10px;
-    color: #482727;
-    margin-bottom: 0;
-}
-
-.locate {
-    margin-left: 370px;
-}
-
-.total {
-    margin-left: 370px;
-}
-
-.headbook {
-    margin-left: 260px;
-    margin-bottom: 30px;
-}
-
-.locate p,
-.total p {
-    color: #482727;
-}
-
-.price,
-.location {
-    width: 500px;
-    padding-top: 20px;
-}
-
-.total p {
-    font-size: 20px;
-}
-
-.location p,
-.price p {
-    margin-bottom: 0;
-}
-
-.button-borrow {
-    display: flex;
-    justify-content: flex-end;
-    margin-right: 380px;
-}
-
-header h1 {
-    font-weight: bold;
-    padding-left: 150px;
-    margin-top: 40px;
+.cartp {
+    font-weight: bolder;
     font-size: 30px;
-    margin-bottom: 40px;
-    text-decoration-line: underline;
-    text-decoration-color: #FF8D1C;
-    text-decoration-style: solid;
-}
-.locate {
-    display: flex;
-    flex-direction: row; 
-    align-items: center; 
+    margin-left: 8rem;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
 }
 
-.button-borrow,
-.button-delete {
-    margin-right: 20px; /* ระยะห่างระหว่างปุ่ม */
+.container-cart {
+    margin-left: 10%;
+    margin-bottom: 6%;
 }
+
+.cart {
+    display: inline-block;
+    border: 2px solid #11009E;
+    border-radius: 20px;
+    margin-bottom: 2rem;
+    padding-top: 1rem;
+    text-align: center;
+    width: 30%;
+    margin-left: 10%;
+}
+
+.img-cart {
+    width: 130px;
+}
+
+.cart-p {
+    font-size: 15px;
+}
+
+.add-cart {
+    text-decoration: none;
+    font-size: 15px;
+    background-color: white;
+    color: #4942E4;
+    padding: 0.3rem 3.5rem;
+    border-radius: 10px;
+    border: 1px solid #4942E4;
+}
+
+.add-cart:hover {
+    background-color: #332cc0;
+    color: white;
+}
+
+.delete-cart {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 15px;
+    background-color: #4942E4;
+    color: white;
+    padding: 0.3rem 3.5rem;
+    border-radius: 10px;
+    border: none;
+}
+
+hr{
+    width: 88%;
+    margin-left: 8rem;
+}
+
+.total h2{
+    text-align: right;
+    margin-right: 10.5rem;
+    font-weight: bolder;
+}
+
+.a p{
+    text-align: right;
+    margin-right: 10.5rem;
+    font-weight: bolder;
+    margin-bottom: 4rem;
+}
+
+.a p a{
+    text-decoration: none;
+    color: white;
+    width: 20%;
+    background-color: #28A745;
+    padding: 8px 20px;
+    border-radius: 10px;
+}
+
+.a p a:hover{
+    background-color: #36904b;
+}
+
+/* payment */
+
+.container-content .img-payment{
+    display: block;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    filter: drop-shadow(5px 5px 5px rgb(150, 150, 150));
+    margin-top: 3rem;
+}
+
+.payment{
+    text-align: center;
+}
+
+.day-payment{
+    text-align: center;
+}
+
+.day-payment .info-payment{
+    color: red;
+    font-size: 14px;
+    margin: 0rem 5rem;
+    margin-bottom: 1rem;
+}
+
+.container-content{
+    border: 2px solid #11009E;
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1rem;
+    border-radius: 5%;
+    margin-bottom: 4rem;
+    font-size: 15px;
+}
+
+.paymentcf{
+    text-decoration: none;
+    color: white;
+    width: 50%;
+    background-color: #28A745;
+    padding: 8px 20px;
+    border-radius: 10px;
+    border: none;
+    margin-bottom: 1.5rem;
+}
+
+/* history */
+.button-borrow a{
+    text-decoration: none;
+    color: white;
+    width: 50%;
+    background-color: #28A745;
+    padding: 8px 20px;
+    border-radius: 10px;
+    border: none;
+    margin-bottom: 1.5rem;
+}
+
+.button-borrow{
+    margin-bottom: 4rem;
+    margin-left: 8rem;
+    margin-top: 2rem;
+}
+
+.headbook{
+    margin-left: 8rem;
+    background-color: #8696FE;
+    color: white;
+    width: 40%;
+    margin-top: 1rem;
+    border-radius: 10px;
+    margin-bottom: 4rem;
+    padding: 3rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
