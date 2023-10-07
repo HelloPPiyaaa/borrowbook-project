@@ -1,11 +1,45 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="/stylesheets/home.css">
+</head>
+
+<body>
+    <!--เทมเพลตเดียวกับหมวดหมู่-->
+
+    <%- include('./partials/nav.ejs') %>
+
+        <!--ภาพปก-->
+
+        <div class="index">
+            <% if (books.length> 0) { %>
+                <% books.forEach(book=> { %>
+                    <div class="index_book">
+                        <img class="imgbookhome" src="/images/<%= book.image %>" alt="" width="200px">
+                        <p class="homep">
+                            <%= book.title %>
+                        </p>
+                        <a class="detail" href="/users/detail/<%= book.id %>">ดูรายละเอียด</a>
+                        <div class="add-to-cart">
+                            <form class="addform" action="/add-to-cart/<%= book.id %>" method="POST">
+                                <input type="number" name="quantity" id="quantity" value="1" min="1" hidden>
+                                <button type="submit">เพิ่มลงรถเข็น</button>
+                            </form>
+                        </div>
+
+                    </div>
+                    <% }) %>
+        </div>
+        <% } else { %>
+            There are no books to display
+            <% } %>
+
+        <%- include('./partials/footer.ejs') %>
+
+</body>
+
 </html>
