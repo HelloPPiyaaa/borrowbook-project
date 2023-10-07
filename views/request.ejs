@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="/stylesheets/admin.css">
+     <title>คำขอเช่าหนังสือ</title>
+
+</head>
+
+<body>
+     <%- include('./Partials/navAdmin.ejs') %>
+          <div class="home-admin">
+               <p>คำขอเช่าหนังสือ</p>
+          </div>
+          <table>
+               <tr>
+                    <th>ชื่อผู้เช่า</th>
+                    <th>ชื่อหนังสือ</th>
+                    <th>จำนวน</th>
+                    <th>วันที่เช่า</th>
+                    <th>วันครบกำหนด</th>
+                    <th>ใบเสร็จโอนเงิน</th>
+                    <th colspan="2">ตรวจสอบ</th>
+               </tr>
+               <% if (rents.length>0) { %>
+                    <% rents.forEach(rentInfo=> { %>
+                         <tr>
+                              <td>
+                                   <%= rentInfo.user %>
+                              </td>
+
+                              <td>
+                                   <% rentInfo.cart.forEach((books)=> { %>
+                                        <%= books.book %><br />
+                                             <% }); %>
+                              </td>
+                              <td>
+                                   <% rentInfo.cart.forEach((books)=> { %>
+                                        <%= books.quantity %><br />
+                                             <% }); %>
+                              </td>
+                              <td>
+                                   <%= rentInfo.rentalStartTime.toLocaleString('th-TH', { timeZone: 'Asia/Bangkok' }) %>
+                              </td>
+                              <td>
+                                   <%= rentInfo.rentalEndTime.toLocaleString('th-TH', { timeZone: 'Asia/Bangkok' }) %>
+                              </td>
+                              <td>
+                                   <img src="/images/<%= rentInfo.slip %>" width="200px">
+                              </td>
+                              <td style="width: 150px;"><a class="rent" href="/books/confirmRent/<%= rentInfo._id%>">ให้เช่า</a></td>
+                              <td style="width: 150px;"><a class="norent" href="/books/removermRent/<%= rentInfo._id%>">ไม่ให้เช่า</a></td>
+
+                         </tr>
+                         <% }) %>
+                              <% } else { %>
+                                   <tr>
+                                        <td colspan="8" style="text-align: center;">ไม่มีคำขอเช่าหนังสือ</td>
+                                   </tr>
+                                   <% } %>
+          </table>
+
+          <%- include('./partials/footer.ejs') %>
+
+</body>
+
+</html>
