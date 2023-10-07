@@ -1,85 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/nav.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> 
 </head>
-
-<body>
+<body style="font-family:'Prompt', sans-serif;">
     <nav class="navbar navbar-expand-lg navbar-light  sticky-top pt-2">
-        <div class="container">
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link link-dark" href="#">หน้าหลัก</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle link-dark" href="#" id="navbarDropdown" role="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            หมวดหมู่
-                        </a>
-                        <div class="dropdown-content rounded" style="border: 1px solid #FF8D1C; ">
-                            <a class="dropdown-item" style="border-bottom: 1px solid #FF8D1C;" href="#">วรรณกรรม</a>
-                            <a class="dropdown-item" style="border-bottom: 1px solid #FF8D1C;" href="#">โรแมนติก</a>
-                            <a class="dropdown-item" style="border-bottom: 1px solid #FF8D1C;" href="#">เรื่องสั้น</a>
-                            <a class="dropdown-item" href="#">อบอุ่น</a>
-                        </div>
-                    </li>
-                    <li class="nav-item">
-                        <div class="search-input">
-                            <input class="form-control" type="text" placeholder="ค้นหา" aria-label="ค้นหา">
-                            <div class="search-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                    class="bi bi-search" viewBox="0 0 16 16">
-                                    <path
-                                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
-                                </svg>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="nav-item">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+    <a href="/home" style="text-decoration: none;">
+        <header>
+            <img class="logosignup" src="/images/logohome.png" alt="">
+            <p>TigerBook</p>
+        </header>
+    </a>
+    <div class="container">
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link link-light" href="/home">หน้าหลัก</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle link-light" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="margin-right: 1rem;">
+                        หมวดหมู่
+                    </a>
+                    <div class="dropdown-content rounded" style="border: 1px solid #4942E4; ">
+                        <a class="dropdown-item" style="border-bottom: 1px solid #4942E4;" href="/cartoon">การ์ตูน</a>
+                        <a class="dropdown-item" style="border-bottom: 1px solid #4942E4;"
+                            href="/literature">วรรณกรรม</a>
+                        <a class="dropdown-item" style="border-bottom: 1px solid #4942E4;" href="/novel">นวนิยาย</a>
+                    </div>
+                </li>
+
+                <form class="example" action="/search" method="GET" style="margin:auto;max-width:300px;">
+                    <input type="text" placeholder="ค้นหาสินค้า" placeholder="Search.." name="query">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                </form>
+
+                <li class="nav-item">
+                    <a href="/cart">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
                             class="bi bi-cart-fill" viewBox="0 0 16 16" style="color: white;">
                             <path
                                 d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
                         </svg>
-                    </li>
-                    <li class="nav-item">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                            class="bi bi-bell-fill" viewBox="0 0 16 16" style="color: white;">
-                            <path
-                                d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zm.995-14.901a1 1 0 1 0-1.99 0A5.002 5.002 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901z" />
-                        </svg>
-                    </li>
-                    <li class="nav-item" id="profile-menu">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                        class="bi bi-bell-fill" viewBox="0 0 16 16" style="color: white;">
+                        <path
+                            d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zm.995-14.901a1 1 0 1 0-1.99 0A5.002 5.002 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901z" />
+                    </svg>
+                </li>
+                <li class="nav-item" id="profile-menu">
+                    <a href="/users/edit">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
                             class="bi bi-person-fill" viewBox="0 0 16 16" style="color: white;">
                             <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
                         </svg>
-                        <ul id="profile-menu-dropdown" class="hidden rounded" style="border: 1px solid #FF8D1C;">
-                            <li><a href="/borrow.ejs">การเช่าของฉัน</a></li>
-                            <li><a href="/edit.ejs">แก้ไขโปรไฟล์</a></li>
-                            <li><a href="/login.ejs">ออกจากระบบ</a></li>
+                        <ul id="profile-menu-dropdown" class="hidden rounded" style="border: 1px solid #4942E4;">
+                            <li><a href="/borrow">การเช่าของฉัน</a></li>
+                            <li><a href="/users/edit">โปรไฟล์ของฉัน</a></li>
+                            <li><a href="/">ออกจากระบบ</a></li>
                         </ul>
-                    </li>
-                </ul>
-            </div>
+                    </a>
+                </li>
+            </ul>
         </div>
-    </nav>
-    <script>
-        const profileIcon = document.getElementById('profile-icon');
-        const profileMenuDropdown = document.getElementById('profile-menu-dropdown');
+    </div>
+</nav>
+<!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script> -->
+<script>
+    const profileIcon = document.getElementById('profile-icon');
+    const profileMenuDropdown = document.getElementById('profile-menu-dropdown');
 
-        profileIcon.addEventListener('click', function () {
-            profileMenuDropdown.classList.toggle('hidden');
-        });
-    </script>
-
+    profileIcon.addEventListener('click', function () {
+        profileMenuDropdown.classList.toggle('hidden');
+    });
+</script>
 </body>
-
 </html>
