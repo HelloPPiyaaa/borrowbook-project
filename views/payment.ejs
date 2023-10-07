@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="/stylesheets/shop.css">
+     <title>ชำระเงิน</title>
+</head>
+
+<body>
+
+          <%- include('./partials/nav.ejs') %>
+          <p class="cartp">ชำระเงิน</p>
+          <div class="container-content">
+               <img class="img-payment" src="./images/grcode.jpg" width="200px">
+               <div class="payment">
+                    <form action="/payment/confirm" method="post" enctype="multipart/form-data"> <br>
+                         <div class="file-payment">
+                              <input type="file" name="slip">
+                         </div>
+                          <br>
+                         
+                    <% if (cart.length > 0) { %>
+                         <% cart.forEach(item => { %>
+                             
+                                 <%= item.book.title %> (จำนวน: <%= item.quantity %>)
+                            <br>
+                         <% }) %>
+               </div>
+        
+               <div class="not" style="margin-bottom: 5rem;">
+                    <% } else { %>
+                         ไม่มีสินค้าในตะกร้า
+                     <% } %>
+               </div>
+         
+           <br>
+
+           <div class="day-payment">
+               <p>วันที่เช่า: <%= rentalStartTime.toISO() %></p>
+               <p>วันที่คืน: <%= rentalEndTime.toISO() %></p>
+               <p class="info-payment">*กรุณานำหนังสือมาคืนในวันที่กำหนด หากนำมาส่งคืนล่าช้าจะถูกปรับเล่มละ 30 บาท ต่อวัน*</p>
+               <button class="paymentcf">ยืนยันการชำระเงิน</button>
+
+           </div>
+     </form>
+</div>
+<%- include('./partials/footer.ejs') %>
+
+     </body>
+</html>
