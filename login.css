@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt&family=Roboto&display=swap');
+
+* {
+    font-family: 'Prompt', sans-serif;
+}
+
+/* เข้าสู่ระบบ */
+
+.h2-login {
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #11009E;
+}
+
+.info-login {
+    font-size: 13px;
+    text-align: center;
+}
+
+.pro-e,
+.form-container {
+    background-color: white;
+    width: 600px;
+    border: 1px solid #11009E;
+    border-radius: 30px;
+    margin: 80px auto 80px auto;
+    padding: 50px 0 40px 0;
+}
+
+.edit-container{
+    background-color: white;
+    width: 600px;
+    border: 1px solid #11009E;
+    border-radius: 30px;
+    margin: 15px auto 80px auto;
+    padding: 50px 0 50px 0;
+}
+
+.info-login {
+    font-size: 13px;
+    text-align: center;
+}
+
+.form-group label {
+    display: block;
+    margin-left: 12%;
+    margin-right: 12%;
+    line-height: 200%;
+    font-size: 13px;
+}
+
+.form-group input {
+    border: 1px solid #11009E;
+    display: block;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 13px;
+    border: 1 solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+form .btn-login,
+form .btn-reg {
+    display: block;
+    width: 75%;
+    cursor: pointer;
+    background-color: #11009E;
+    color: white;
+    padding: 10px;
+    border: none;
+    font-size: 13px;
+    border-radius: 10px;
+    margin: 18px 0px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+form .btn-login:hover {
+    background-color: #4942E4;
+}
+
+form .btn-reg:hover {
+    background-color: #4942E4;
+}
+
+form .p-login {
+    font-family: 'Prompt', sans-serif;
+    font-size: 12px;
+    text-align: center;
+}
+
+form .p-signup{
+    font-family: 'Prompt', sans-serif;
+    font-size: 12px;
+    text-align: center;
+}
+
+form .p-signup a{
+    color: #11009E;
+    text-decoration: none;
+}
+
+form .p-login a {
+    color: #11009E;
+    text-decoration: none;
+}
+

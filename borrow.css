@@ -1,0 +1,93 @@
+.centered-section {
+     margin: auto;
+     /* ใช้ margin:auto เพื่อจัดเนื้อหากึ่งกลางทั้งแนวนอนและแนวตั้ง */
+     width: 50%;
+     /* กำหนดความกว้างของ section ให้เป็น 50% ของพื้นที่ของ parent element */
+     text-align: center;
+     /* จัดเนื้อหาให้อยู่กึ่งกลางแนวนอน */
+ }
+ 
+ .img1 img {
+     max-width: 200px;
+     float: left;
+     margin-right: 20px;
+     border-radius: 20px;
+     height: 300px;
+ }
+ 
+ .headbook,
+ .total,
+ .locate {
+     flex: 1;
+     display: flex;
+     flex-direction: column;
+ }
+ 
+ 
+ .detail,
+ .price,
+ .totalprice,
+ .location,
+ .datetime {
+     display: flex;
+     justify-content: flex-start;
+     align-items: center;
+     margin: 0;
+ }
+ 
+ .detail p {
+     margin-left: 10px;
+     color: #482727;
+     margin-bottom: 0;
+ }
+ 
+ .locate {
+     margin-left: 270px;
+ }
+ 
+ .total {
+     margin-left: 270px;
+ }
+ 
+ .headbook {
+     margin-left: 260px;
+     margin-bottom: 30px;
+ }
+ 
+ .locate p,
+ .total p {
+     color: #482727;
+ }
+ 
+ .price,
+ .location {
+     border-top: 2px solid #FFB366;
+     width: 500px;
+     padding-top: 20px;
+ }
+ 
+ .total p {
+     font-size: 20px;
+ }
+ 
+ .location p,
+ .price p {
+     margin-bottom: 0;
+ }
+ 
+ .button-borrow {
+     display: flex;
+     justify-content: flex-end;
+     margin-right: 380px;
+ }
+ 
+ header h1 {
+     font-weight: bold;
+     padding-left: 150px;
+     margin-top: 40px;
+     font-size: 30px;
+     margin-bottom: 40px;
+     text-decoration-line: underline;
+     text-decoration-color: #FF8D1C;
+     text-decoration-style: solid;
+ }
