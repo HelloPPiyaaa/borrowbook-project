@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="/stylesheets/shop.css">
+     <title>ตะกร้าของฉัน</title>
+</head>
+
+<body>
+     <%- include('./partials/nav.ejs') %>
+          <p class="cartp">ตะกร้าของ <%= user.username %></p>
+          <div class="container-cart">
+                    <% if (cart.length> 0) { %>
+                         <% cart.forEach(item=> { %>
+                                   <div class="cart">
+                                        <img class="img-cart" src="/images/<%= item.book.image %>" alt="">
+                                        <p class="cart-p"><%= item.book.title %> <br> จำนวน: <%= item.quantity %> เล่ม
+                                        <br> ราคาเล่มละ: <%= item.book.price %> บาท</p>
+                                        <form action="/add-to-cart/<%= item.book.id %>" method="POST">
+                                             <button class="add-cart" type="submit">เพิ่มจำนวนสินค้า</button>
+                                        </form>
+                                        
+                                        <form action="/remove-from-cart/<%= item.book.id %>" method="post">
+                                             <input class="delete-cart" type="submit" value="ลบจำนวนสินค้า">
+                                        </form>
+                                   </div>
+                         
+                                   <% }) %>
+                              <hr>
+                              <div class="total">
+                                   <h2>ราคารวม: <%= totalPrice %> บาท</h2>
+                                   <hr>
+                              </div>
+                              <div class="a">
+                                   <p><a href="/payment">ชำระเงิน</a> </p>
+                              </div>
+                    <% } else { %>
+                         <span class="nobook">{ไม่มีสินค้าในตะกร้า} </span>             
+                    <% } %>
+          </div>
+
+
+
+
+
+          <%- include('./partials/footer.ejs') %>
+
+</body>
+
+</html>
