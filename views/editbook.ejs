@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="/stylesheets/admin.css">
+     <link rel="stylesheet" href="/stylesheets/nav.css">
+     <title>แก้ไขหนังสือ</title>
+</head>
+
+<body>
+     <%- include('./Partials/navAdmin.ejs') %>
+
+     <div class="home-admin">
+          <p>แก้ไขหนังสือ</p>
+     </div>
+     <div class="container-editadmin">
+          <form action="/books/updateBook/<%= books._id%>" method="post" enctype="multipart/form-data">
+               <div class="form-editadmin">
+
+                    <label for="image">ปกหนังสือ</label><br/>
+                    <img style="display: block; margin-right: auto; margin-left: auto; margin-bottom: 1.5rem; margin-top: -1rem;" src="/images/<%= books.image%>" width="200px">
+                    <input type="file" id="image" name="image">
+
+                    <label for="bookid">รหัสหนังสือ</label>
+                    <input type="text" id="bookid" name="bookid" value="<%= books.bookid%>" >
+
+                    <label for="title">ชื่อหนังสือ</label>
+                    <input type="text" id="title" name="title" value="<%= books.title%>" >
+
+                    <label for="category">หมวดหมู่</label>
+                    <select id="category" name="category">
+                         <option hidden><%= books.category%></option>
+                         <option value="วรรณกรรม">วรรณกรรม</option>
+                         <option value="การ์ตูน">การ์ตูน</option>
+                         <option value="นวนิยาย">นวนิยาย</option>
+                    </select>
+
+                    <label for="author">ชื่อผู้แต่ง</label>
+                    <input type="text" id="author" name="author" value="<%= books.author%>" >
+
+                    <label for="publisher">สำนักพิมพ์</label>
+                    <input type="text" id="publisher" name="publisher" value="<%= books.publisher%>" >
+
+                    <label for="synopsis">เรื่องย่อ</label>
+                    <textarea id="synopsis" name="synopsis" cols="60" rows="10"><%= books.synopsis%></textarea required>
+
+                    <label for="price">ราคา</label>
+                    <input type="number" id="price" name="price" value="<%= books.price%>">
+
+                    <label for="amount">จำนวนเล่ม</label>
+                    <input type="number" id="amount" name="amount" value="<%= books.amount%>">
+ 
+                    <button style="margin-top: 1.5rem;" class="editbook">บันทึกข้อมูล</button>
+               </div>
+          </form>
+     </div>
+     <%- include('./partials/footer.ejs') %>
+
+</body>
+
+</html>
