@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/home.css">
+    <link rel="stylesheet" href="/stylesheets/nav.css">
+    <link rel="stylesheet" href="/stylesheets/datailbook.css">
+    <title>รายละเอียดหนังสือ</title>
+</head>
+
+<body>
+    <%- include('./partials/nav.ejs') %>
+        <div class="container-detailbook">
+                <img class="img_book_detail" src="/images/<%= result.image %>" alt="" width="200px">
+                <div class="detail_book">
+                    <div class="detail_book_p">
+                        <p id="title_book_datail">
+                            <%= result.title %>
+                        </p>
+                    </div>
+                    <div class="detail_book_p">
+                        <p>ผู้เขียน: </p>
+                        <p>
+                            <%= result.author %>
+                        </p>
+                    </div>
+                    <div class="detail_book_p">
+                        <p>สำนักพิมพ์: </p>
+                        <p>
+                            <%= result.publisher %>
+                        </p>
+                    </div>
+                    <div class="detail_book_p">
+                        <p>หมวดหมู่: </p>
+                        <p>
+                            <%= result.category %>
+                        </p>
+                    </div>
+
+                    <div class="synopsis_detail">
+                        <p id="synopsis">เรื่องย่อ</p>
+                    </div>
+                    <div class="synopsis_detail">
+                        <p>
+                            <%= result.synopsis %>
+                        </p>
+                    </div>
+
+                    <div class="detail_trolley">
+                        <p>ราคา <%= result.price %> บาท</p>
+                    </div>
+                    <div class="detail-a">
+                        <a href="/alert">เพิ่มลงรถเข็น</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <%- include('./partials/footer.ejs') %>
+
+</body>
+
+</html>
