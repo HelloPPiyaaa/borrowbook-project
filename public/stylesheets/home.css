@@ -1,70 +1,93 @@
-/*ช่อง*/
+* {
+  margin: 0;
+  padding: 0;
+}
 
-.book_img {
-    width: 70%;
-    height: 70%;
-    margin: auto;
-    display: block;
-    padding: 15px;
-    border-radius: 25px;
-  }
-  
-  .card_div_book {
-    border: 1px solid #FF8D1C;
-    border-radius: 10px;
-    padding: 20px;
-    width: 100%;
-    text-align: center;
-    box-shadow: 0 0 5px rgb(214, 214, 218);
-    margin-top: 15px;
-    margin: 20px;
-  
-  }
-  
-  .card-title_book {
-    text-align: center;
-    font-weight: bold;
-  }
-  
-  /*ปุ่ม*/
-  
-  .bt_book_detail {
-    border: 1px solid #FF8D1C;
-    background-color: white;
-    border-radius: 15px;
-    text-decoration: none;
-    color: black;
-   
-  
-  }
-  .bt_book_trolly{
-      border: 1px solid #FF8D1C;
-      background-color: #FFB366;
-      color: white;
-      border-radius: 15px;
-      text-decoration: none;
-     
-      
-     
-  }
-  
-  .bt_book_trolly:hover{
-    color: #FFCC99;
-  }
-  .bt_book_detail:hover{
-    color: #FF8D1C;
-  }
-  
+.index {
+  margin-top: 3.5rem;
+  margin-left: 7rem;
+  margin-right: 7rem;
+}
 
-  
-  /*รูปปก*/
-  
-  .img_title {
-    max-width: 100%;
-    width: 100%;
-    height: auto;
-    display: block;
-    margin: auto;
-    /* รูปภาพจะปรับสูงตามสัดส่วนของรูปและหน้าจอ */
-  }
-  
+.imgbookhome {
+  width: 200px;
+  border-radius: 20px;
+}
+
+.index_book {
+  border: 2px solid #11009E;
+  border-radius: 20px;
+  margin-bottom: 2rem;
+  padding-top: 1rem;
+  text-align: center;
+}
+
+.index_book .homep {
+  font-size: 15px;
+  margin-top: 0.5rem;
+  width: 250px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.detail {
+  text-decoration: none;
+  font-size: 15px;
+  background-color: white;
+  color: #4942E4;
+  padding: 0.3rem 3.5rem;
+  border-radius: 10px;
+  border: 1px solid #4942E4;
+}
+
+.detail:hover{
+  background-color: #332cc0;
+  color: white;
+}
+
+.add-to-cart {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.add-to-cart-cat button{
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 15px;
+  background-color: #4942E4;
+  color: white;
+  padding: 0.3rem 3.5rem;
+  border-radius: 10px;
+  border: none;
+}
+
+.addform button {
+  font-size: 15px;
+  background-color: #4942E4;
+  color: white;
+  padding: 0.3rem 3.5rem;
+  border-radius: 10px;
+  border: none;
+}
+
+.addform button:hover{
+  background-color: #332cc0;
+}
+
+/* โปรไฟล์ */
+.edit-hello p{
+  font-size: 30px;
+  font-weight: bolder;
+  margin-bottom: 2rem;
+  margin-top: 4rem;
+  text-align: center;
+}
+
+.edit-container{
+  margin-bottom: 4.5rem;
+}
+.edit-container h5{
+  text-align: center;
+  margin: 1.5rem 0;
+  font-weight: bold;
+}
