@@ -1,69 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>เช่าหนังสือ</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <link rel="stylesheet" href="/stylesheets/style.css">
-    <link rel="stylesheet" href="/stylesheets/borrow.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/stylesheets/shop.css">
+  <title>เช่าหนังสือ</title>
 </head>
+
 <body>
-    <%- include('./Partials/nav.ejs') %>
-    <header>
-        <h1>เช่าหนังสือ</h1>
-    </header>
-    <section class="centered-section">
-        <div class="img1">
-            <img src="https://image.makewebeasy.net/makeweb/m_1920x0/7GFEYsdVK/DefaultData/The_Reader_front_cover_FINAL.jpg?v=202206091808" alt="book">
-        </div>
-        <div class="headbook">
-            <div class="detail">
-                <p style="font-size: 30px; color: #482727; font-weight: bold;">อ่านรักวันโลกร้าว (Der Vorleser)</p>
-            </div>
-            <div class="detail">
-                <p>ผู้เขียน: </p> 
-                <p>แบร์นฮาร์ด ชลิงค์</p>
-            </div>
-            <div class="detail">
-                <p>สำนักพิมพ์: </p> 
-                <p>ไลบรารี่ เฮ้าส์/Library House</p>
-            </div>
-            <div class="detail">
-                <p>หมวดหมู่: </p> 
-                <p>วรรณกรรม</p>
-            </div>
-        </div>
+  <%- include('./partials/nav.ejs') %>
+    <p class="cartp">ประวัติเช่าหนังสือ</p>
 
-        <div class="total">
-            <div class="price">
-                <p>จำนวน</p>
-                <p style="margin-left: 370px; margin-right: 20px;"> 1 </p>
-                <p>เล่ม</p>
-            </div>
-            <div class="totalprice">
-                <p>ราคารวม</p>
-                <p style="margin-left: 330px; margin-right: 20px;"> 100 </p>
-                <p>บาท</p>
-            </div>
-        </div>
+    <div class="headbook">
 
-        <div class="locate">
-            <div class="location">
-                <p>จุดรับ : </p>
-                <p>ร้านหนังสือ tiger book มหาวิทยาลัยขอนแก่น</p>
-            </div>
-            <div class="datetime">
-                <p>ระยะเวลาการเช่า : </p>
-                <p>ไม่เกิน 7 วัน</p>
-            </div>
-        </div>
-    </section>
+      <% rentData.forEach(item=> { %>
+        <% let status; %>
+        <% if (item.statusPayment===0 && item.statusRent===0) { %>
+            <% status="กำลังตรวจสอบการชำระเงิน" ; %>
+        <% } else if (item.statusPayment===1 && item.statusRent===0) { %>
+            <% status="อยู่ในระหว่างการเช่า" ; %>
+        <% } else { %>
+            <% status="คืนหนังสือแล้ว" ; %>
+        <% } %>
 
-    <div class="button-borrow">
-        <a href="#" class="btn   fw-bold" style="border-radius: 10px!important; background-color: #FFB366; color: white;">ชำระเงิน</a>
-    </div>
+        <strong>รายชื่อหนังสือที่เช่า:</strong>
+        <% item.cart.forEach((books, index) => { %>
+          <%= books.book %><%= index !== item.cart.length - 1 ? ',' : '' %>
+        <% }); %> <br> 
+        <strong>วันครบกำหนด:</strong>
+        <%= item.rentalStartTime.toLocaleString('th-TH', { timeZone: 'Asia/Bangkok' }) %><br>
+        <strong>สถานะ:</strong>
+        <%= status %><br><hr>
 
-    <%- include('./partials/footer.ejs') %>
+    <% }); %>
+  </div>
+
+      <%- include('./partials/footer.ejs') %>
 </body>
+
 </html>
