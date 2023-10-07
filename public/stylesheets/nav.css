@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt&family=Roboto&display=swap');
+
+*{
+     font-family: 'Prompt', sans-serif;
+}
+
+html {
+     scroll-behavior: smooth;
+}
+
+.navbar {
+     background-color: #11009E;
+}
+
+header {
+     background-color: #11009E;
+     color: white;
+     padding: 1rem;
+     font-size: 25px;
+     font-weight: bolder;
+     display: flex;
+     padding-left: 7rem;
+}
+
+.logosignup {
+     width: 70px;
+}
+
+header p {
+     padding-left: 1rem;
+     padding-top: 1rem;
+}
+
+form.example input[type=text] {
+     padding: 7px;
+     font-size: 12px;
+     float: left;
+     width: 80%;
+     background: #f1f1f1;
+     border: none;
+
+}
+
+form.example button {
+     float: left;
+     width: 20%;
+     padding: 3.25px;
+     background: #4942E4;
+     color: white;
+     font-size: 17px;
+     border: 1px solid grey;
+     border-left: none;
+     cursor: pointer;
+     border: none;
+}
+
+form.example button:hover {
+     background: #8696FE;
+}
+
+form.example::after {
+     content: "";
+     clear: both;
+     display: table;
+}
+
+.container {
+     display: flex;
+     justify-content: flex-end;
+     align-items: center;
+     height: 100%;
+     padding-top: 50px;
+}
+
+nav .container{
+     margin-right: 7rem;
+}
+
+nav>.container>div>ul>li>a:hover {
+     color: white !important;
+}
+
+nav>.container>div>ul>li:hover {
+     border-radius: 10px;
+     border-bottom-left-radius: 0;
+     border-bottom-right-radius: 0;
+     border: 1px solid #8696FE;
+     border-bottom: none;
+     box-shadow: 2px 4px 18px #18181818;
+}
+
+nav>.container>div>ul>li:hover>a>i {
+     transition: .25s;
+     transform: rotate(180deg)
+}
+
+nav>.container>div>ul>li>ul {
+     display: none;
+     list-style: none;
+}
+
+nav>.container>div>ul>li:hover>ul>li:hover>a>i {
+     transition: .25s;
+     transform: rotate(180deg)
+}
+
+nav>.container>div>ul>li:hover>ul {
+     position: absolute;
+     display: block !important;
+     padding-left: 1em;
+     background-color: white;
+     border-radius: 10px;
+     border-top-left-radius: 0;
+     border-top-right-radius: 0;
+     border: 1px solid #f5f5f5;
+     box-shadow: 2px 4px 18px #18181818;
+}
+
+nav>.container>div>ul>li:hover>ul>li {
+     padding-right: 1em;
+}
+
+/* Second Level [Dropdown] elements ([#tags]A display on [#tags]a first level on action hover)*/
+nav>.container>div>ul>li:hover>ul>li>a {
+     text-decoration: none;
+     text-align: center;
+     display: inline-block;
+     padding: .25em 0;
+}
+
+nav>.container>div>ul>li:hover>ul>li>a:hover {
+     color: #4942E4 !important;
+}
+
+.search-input {
+     position: relative;
+}
+
+.hidden {
+     display: none;
+}
+
+/* CSS to style the dropdown menu */
+#profile-menu-dropdown {
+     position: absolute;
+     background-color: white;
+     z-index: 1;
+     padding: 2px 0;
+     width: 120px;
+     list-style-type: none;
+     margin: 0;
+     border: 1px solid #4942E4;
+}
+
+#profile-menu-dropdown li {
+     padding: 8px;
+     text-align: center;
+     border-bottom: 1px solid #4942E4;
+}
+
+#profile-menu-dropdown li:last-child {
+     border-bottom: none;
+     /* ไม่ต้องมีเส้นขอบด้านล่างสำหรับรายการสุดท้าย */
+}
+
+#profile-menu-dropdown li:hover {
+     color: white;
+     cursor: pointer;
+}
+
+#profile-menu-dropdown a {
+     color: black;
+     font-size: 14px;
+}
+
+.search-input input[type="text"] {
+     padding-right: 30px;
+     border-radius: 20px;
+     width: 150px;
+     border: 1px solid #4942E4;
+}
+
+.search-icon {
+     position: absolute;
+     top: 50%;
+     right: 10px;
+     transform: translateY(-50%);
+     cursor: pointer;
+     color: #4942E4;
+}
+
+.navbar-nav {
+     display: flex;
+     justify-content: flex-end;
+     align-items: center;
+     list-style: none;
+     margin-left: auto;
+     padding: 0;
+}
+
+.navbar-brand {
+     margin-right: 30px;
+}
+
+#navbar {
+     margin-right: 20px;
+}
+
+.nav-link,
+.dropdown-content a {
+     font-size: 14px;
+}
+
+/* สไตล์สำหรับเมนู Dropdown */
+.dropdown {
+     position: relative;
+     display: inline-block;
+}
+
+.dropdown-content {
+     display: none;
+     position: absolute;
+     background-color: #fff;
+     min-width: 160px;
+     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+     z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+     display: block;
+}
+
+.dropdown-content a {
+     padding: 10px;
+     text-decoration: none;
+     display: block;
+}
+
+.dropdown-content a:hover {
+     color: #4942E4;
+}
+
+.cart-icon,
+.notification-icon,
+.person-icon {
+     font-size: 24px;
+     margin-left: 10px;
+}
+
+.nav-item {
+     margin-left: 20px;
+     font-size: 14px;
+}
