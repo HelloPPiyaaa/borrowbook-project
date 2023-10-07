@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/login.css">
+    <link rel="stylesheet" href="/stylesheets/footer.css">
+    <title>ลงทะเบียน</title>
+    <style>
+        header {
+            background-color: #11009E;
+            color: white;
+            padding: 2rem;
+            font-size: 25px;
+            font-weight: bolder;
+            display: flex;
+            padding-left: 3.5rem;
+        }
+
+        .logosignup{
+            width: 65px;
+        }
+        header p{
+            padding-left: 1rem;
+            padding-top: 0.9rem;
+        }
+        .signup-success{
+            text-align: center;
+            margin-top: 1rem;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <img class="logosignup" src="/images/logotigerbook.png" alt="">
+        <p>TigerBook</p>
+    </header>
+    <div class="form-container">
+        <h2 class="h2-login">ลงทะเบียน</h2>
+        <p class="info-login">กรุณากรอกรายละเอียดของคุณเพื่อลงทะเบียนบัญชี</p>
+        <form action="/users/signup" method="post">
+            <div class="form-group">
+                <label for="username">ชื่อผู้ใช้</label>
+                <input type="text" id="username" name="username" placeholder="กรอกชื่อผู้ใช้ของคุณ" required>
+                <label for="email">อีเมลล์</label>
+                <input type="text" id="email" name="email" placeholder="กรอกอีเมลล์ของคุณ" required>
+                <label for="address">เบอร์โทรศัพท์</label>
+                <input type="tel" id="tel" name="tel" placeholder="กรอกที่อยู่ของคุณ" required>
+                <label for="password">รหัสผ่าน</label>
+                <input type="password" id="password" name="password" placeholder="รหัสผ่าน" required>
+                <button class="btn-reg">ลงทะเบียน</button>
+                <p class="p-signup">กลับไปหน้า <a href="/">เข้าสู่ระบบ</a></p>
+                <div class="signup-success">
+                    <% if(typeof message !=='undefined' ) { %>
+                        <p style="color: green;">
+                            <%= message %>
+                        </p>
+                        <% } %>
+                </div>
+
+              
+            </div>
+        </form>
+    </div>
+    <%- include('./partials/footer.ejs') %>
+</body>
+
+</html>
