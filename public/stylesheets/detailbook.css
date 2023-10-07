@@ -1,94 +1,89 @@
-
 /*รายละเอียด*/
 
+.container-detailbook {
+  margin: 4rem 8rem;
+  border: 3px solid #11009E;
+  border-radius: 15px;
+  padding: 1rem 3rem;
+}
+
 .img_book_detail {
-    display: block;
-    float: left;
-    width: 200px;
-    border-radius: 10px;
-    margin-top: 40px;
-  }
-  
-  
-  .detail_book {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  #title_book_datail {
-    border-bottom: 3px solid #FF8D1C;
-    font-size: 35px;
-  }
-  
-  
-  .detail_book_p {
-  
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    margin-top: 0;
-  
-  }
-  
-  .detail_book_p p {
-    margin-top: 10px;
-    margin-left: 10px;
-    color: #482727;
-    margin-bottom: 0;
-  }
-  
-  .detail_book {
-    margin-left: 220px;
-    margin-top: 40px;
-  
-  }
-  
-  .detail {
-    margin: auto;
-  
-  
-  }
-  
-  #synopsis {
-    margin-top: 70px;
-    font-size: 35px;
-  
-  
-  }
-  
-  .synopsis_detail {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    margin: 0;
-    margin-left: 10px;
-  }
-  
-  
-  .detail_trolley {
-    margin-left: 10px;
-    float: right;
-  
-  }
-  
-  .bt_book_trolley {
-    padding: 10px;
-  }
-  
-  #price_detail_book {
-    font-weight: bold;
-  
-    font-size: 20px;
-  
-  }
-  /*ปุ่ม*/
-  
-  .bt_book_trolley{
-    border: 1px solid #FF8D1C;
-      background-color: #FFB366;
-      color: white;
-      border-radius: 15px;
-  
-  }
-  
+  display: block;
+  float: left;
+  width: 290px;
+  border-radius: 10px;
+  margin-top: 40px;
+}
+
+.detail_book {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+#title_book_datail {
+  border-bottom: 3px solid #11009E;
+  font-size: 35px;
+}
+
+#synopsis {
+  border-bottom: 3px solid #11009E;
+  font-size: 35px;
+}
+
+.detail_book_p {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: 2rem;
+}
+
+.detail_book_p p {
+  margin-top: 10px;
+  margin-left: 10px;
+  color: #482727;
+  margin-bottom: 0;
+  font-size: 16px;
+}
+
+.detail_book {
+  margin-left: 220px;
+  margin-top: 40px;
+}
+
+.detail {
+  margin: auto;
+}
+
+#synopsis {
+  margin-top: 70px;
+  font-size: 35px;
+}
+
+.synopsis_detail {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: 3rem;
+  margin-top: -1.5rem;
+  margin-bottom: 1rem;
+}
+
+.detail_trolley{
+  text-align: right;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.detail-a{
+  text-align: right;
+  margin-bottom: 2rem;
+}
+
+.detail-a a{
+  text-decoration: none;
+  background-color: #4942E4;
+  color: white;
+  padding: 0.5rem 2.5rem;
+  border-radius: 10px;
+}
