@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="/stylesheets/admin.css">
+     <title>เพิ่มหนังสือ</title>
+</head>
+<body>
+     <%- include('./Partials/navAdmin.ejs') %>
+     <div class="home-admin">
+          <p>เพิ่มหนังสือ</p>
+     </div>
+
+     <div class="container-add">
+          <form action="/books/insert" method="post" enctype="multipart/form-data">
+               <div class="form-admin">
+                    <label for="image">รูปภาพ</label>
+                    <input type="file" id="image" name="image" required>
+
+                    <label for="bookid">รหัสหนังสือ</label>
+                    <input type="text" id="bookid" name="bookid" required>
+
+                    <label for="title">ชื่อหนังสือ</label>
+                    <input type="text" id="title" name="title" required>
+
+                    <label for="category">หมวดหมู่</label>
+                    <select id="category" name="category">
+                         <option value="วรรณกรรม">วรรณกรรม</option>
+                         <option value="การ์ตูน">การ์ตูน</option>
+                         <option value="นวนิยาย">นวนิยาย</option>
+                    </select>
+
+                    <label for="author">ชื่อผู้แต่ง</label>
+                    <input type="text" id="author" name="author" required>
+
+                    <label for="publisher">สำนักพิมพ์</label>
+                    <input type="text" id="publisher" name="publisher" required>
+
+                    <label for="synopsis">เรื่องย่อ</label>
+                    <textarea id="synopsis" name="synopsis" cols="60" rows="10"></textarea required>
+                    <label for="price">ราคา</label>
+                    <input type="number" id="price" name="price" required>
+
+                    <label for="amount">จำนวนเล่ม</label>
+                    <input type="number" id="amount" name="amount" required><br />
+                    <button class="addbook">บันทึกข้อมูล</button>
+               </div>
+          </form>
+     </div>
+
+     <%- include('./partials/footer.ejs') %>
+
+</body>
+
+</html>
