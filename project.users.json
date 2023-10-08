@@ -1,0 +1,58 @@
+[{
+  "_id": {
+    "$oid": "651b2c6f0431e009868fe3aa"
+  },
+  "username": "Tiger",
+  "email": "tigerrentbook@gmail.com",
+  "address": "ตึก Tiger",
+  "password": "$2b$10$vbLjKDyEc.cdgz.QG3uWA.MaAs1TnOPe7zZzWT7KBnLOQ7OZtg.jy",
+  "is_admin": 1,
+  "cart": [],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6521c89fb832198848e0c18d"
+  },
+  "username": "oo",
+  "email": "hi@gmail.com",
+  "tel": "09177666666",
+  "password": "$2b$10$0T5Lst8jRGpxGd0nuqLZ6OVfm5/OJKLLkjIUDDRV2l.3petEQIEDa",
+  "is_admin": 0,
+  "cart": [],
+  "__v": 2
+},
+{
+  "_id": {
+    "$oid": "65225f90eb4f733e7ac759ba"
+  },
+  "username": "Kanlayanee Boonrin",
+  "email": "kanlayanee.bo@kkumail.com",
+  "tel": "09177666666",
+  "password": "$2b$10$meRqya0DaRXGFrCpAmDEXOWrLCaOjY37.Jr.TlYfPE6E.sPrZyRbi",
+  "is_admin": 0,
+  "cart": [
+    {
+      "book": {
+        "$oid": "65224be2994fee43efa43dd6"
+      },
+      "quantity": 1,
+      "_id": {
+        "$oid": "6522a7dd9f3ddb7d6b31c09d"
+      }
+    }
+  ],
+  "__v": 18
+},
+{
+  "_id": {
+    "$oid": "652261a7eb4f733e7ac75a53"
+  },
+  "username": "maimai",
+  "email": "auntima.p@kkumail.com",
+  "tel": "0987654321",
+  "password": "$2b$10$avCtIykOZgqYmDpSx4eQcu0L6QgRUPxpBFm5Qqu24CBU9mXOBadVC",
+  "is_admin": 0,
+  "cart": [],
+  "__v": 3
+}]
