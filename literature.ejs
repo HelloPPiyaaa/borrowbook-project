@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/home.css">
+    <title>หมวดหมู่วรรณกรรม</title>
+
+</head>
+
+<body>
+    <%- include('../partials/nav') %>
+        <div class="index">
+            <% if (books.length> 0) { %>
+                <% books.forEach(book=> { %>
+                    <div class="index_book">
+                        <img class="imgbookhome" src="/images/<%= book.image %>" alt="" width="200px">
+                        <p class="homep">ชื่อเรื่อง: <%= book.title %></p>
+                        <a class="detail" href="/users/detail/<%= book.id %>">ดูรายละเอียด</a>
+                        <div class="add-to-cart-cat">
+                            <button>เพิ่มลงรถเข็น</button>
+                        </div>
+                    </div>
+                    <% }) %>
+        </div>
+
+        <% } else { %>
+            There are no students to display
+            <% } %>
+
+    <%- include('../partials/footer.ejs') %>
+</body>
+
+</html>
